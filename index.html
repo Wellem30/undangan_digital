@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Wedding of Wellem & Marlin</title>
+
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Fade Out -->
+    <style>
+        .fade-out {
+            animation: fadeOut 1.2s ease forwards;
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+    </style>
+
+</head>
+
+
+<body id="top">
+    
+    <!-- preloader -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div><div></div><div></div>
+        </div>
+    </div>
+
+    <!-- page wrap -->
+    <div id="page" class="s-pagewrap ss-home">
+
+        <!-- intro -->
+        <section id="intro" class="container s-intro target-section">
+
+            <div class="grid-block intro__content" id="coverPage">
+
+                <div class="intro-header">
+                    <div class="intro-header__overline">The Wedding Of</div>
+                    <h1 class="intro-header__big-type">Wellem <br></h1>
+                    <h3 class="u-text-center">&<br></h3>
+                    <h1 class="intro-header__big-type">Marlin <br></h1>
+
+                    <div>
+                        <a class="header-contact__num btn" id="openBtn">
+                            <i class="fa fa-envelope-o"></i> BUKA UNDANGAN
+                        </a>
+                    </div>
+                </div>
+
+                <figure class="intro-pic-primary">
+                    <img src="images/intro-pic-primary.jpg" 
+                         srcset="images/intro-pic-primary.jpg 1x, images/intro-pic-primary@2x.jpg 2x" alt="">
+                </figure>
+                    
+                <div class="intro-block-content">
+
+                    <figure class="intro-block-content__pic">
+                        <img src="images/intro-pic-secondary.jpg" 
+                             srcset="images/intro-pic-secondary.jpg 1x, images/intro-pic-secondary@2x.jpg 2x" alt="">
+                    </figure>
+
+                    <div class="intro-block-content__text-wrap">
+                        <p class="intro-block-content__text">
+                            Savor moments of bliss with every sip, as our expertly 
+                            crafted coffees and delectable pastries embrace your senses.
+                        </p>
+                        
+                        <ul class="intro-block-content__social">
+                            <li><a href="#0">FB</a></li>
+                            <li><a href="#0">IG</a></li>
+                            <li><a href="#0">PI</a></li>
+                            <li><a href="#0">X</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- JS -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Buka Undangan Script -->
+    <script>
+        const btn = document.getElementById("openBtn");
+        const page = document.getElementById("coverPage");
+
+        btn.addEventListener("click", () => {
+
+            // Kirim sinyal untuk autoplay musik di undangan.html
+            localStorage.setItem("playMusic", "yes");
+
+            page.classList.add("fade-out");
+
+            setTimeout(() => {
+                window.location.href = "undangan.html";
+            }, 1200);
+        });
+    </script>
+
+</body>
+</html>
